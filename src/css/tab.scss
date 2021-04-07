@@ -1,0 +1,33 @@
+$tab-margin-horizontal:                   20px !default;
+
+$tab-item-padding-horizontal:             10px !default;
+$tab-item-padding-vertical:               5px !default;
+
+
+.uk-tab.uk-tab-large > * > a {
+  padding: ($tab-item-padding-vertical * 2) ($tab-item-padding-horizontal * 2);
+}
+
+.uk-tab.uk-tab-extralarge > * > a {
+  padding: ($tab-item-padding-vertical * 3) ($tab-item-padding-horizontal * 3);
+}
+//
+//.uk-tab {
+//  &.uk-tab-outside-card {
+//
+//    margin-bottom: 0;
+//    margin-top: -30px;
+//
+//    &::before {
+//      border-bottom: 0;
+//    }
+//    & li {
+//      &.uk-active {
+//        & a {
+//          background: white;
+//          border-color: transparent;
+//        }
+//      }
+//    }
+//  }
+//}
