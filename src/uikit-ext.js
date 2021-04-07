@@ -3,9 +3,9 @@ import _ from 'lodash';
 // import UIkit
 
 import UIkit from 'uikit';
-import Icons from 'uikit/dist/js/uikit-icons';
+//import Icons from 'uikit/dist/js/uikit-icons';
 
-UIkit.use(Icons);
+//UIkit.use(Icons);
 
 // import JQUERY
 

@@ -3,10 +3,13 @@ html(lang='en')
     head
         title UIkit-ext demo
     body
-        h1 Hello, World!
-        div.uk-alert.uk-alert-success
-            p Pug rocks!
-        - const employees = ['Angela', 'Jim', 'Nilson', 'Simone', 'Dre']
-        ul
-            each employee in employees
-                li= employee
+        div.uk-container
+            h1 Hello, World!
+            div.uk-alert.uk-alert-success
+                p Pug rocks!
+            - const employees = ['Angela', 'Jim', 'Nilson', 'Simone', 'Dre']
+            ul
+                each employee in employees
+                    li= employee
+            p
+                button.uk-button.uk-button-lime Lime button

@@ -1,0 +1,15 @@
+@import "./variables";
+
+@mixin hook-button() {
+  &.uk-button-lime {
+    background: $indigo;
+    color: white;
+  }
+}
+
+@mixin hook-button-hover() {
+  &.uk-button-lime {
+    background: darken($indigo, 5);
+    color: white;
+  }
+}

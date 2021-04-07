@@ -1,10 +1,6 @@
 const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
-const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: {
@@ -13,10 +9,10 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        library: '_'
+        library: '_' // make the exports from the entry file available as "_" variable in HTML doc
     },
     resolve: {
-        extensions: ['.js', '.ts', '.tsx'],
+        extensions: ['.js'],
     },
     plugins: [
         // plugin to create index.html file
@@ -30,13 +26,6 @@ module.exports = {
             ignoreOrder: false, // Enable to remove warnings about conflicting order
         }),
     ],
-    optimization: {
-        minimize: devMode === false,
-        minimizer: [
-            new TerserPlugin({}), // plugin to minimize JS
-            new OptimizeCSSAssetsPlugin({}) // plugin to minify CSS
-        ],
-    },
     module: {
         rules: [
             // PUG files
@@ -48,9 +37,7 @@ module.exports = {
             {
                 test: /\.(sa|sc|c)ss$/,
                 use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                    },
+                    MiniCssExtractPlugin.loader,
                     // CSS loader, need this for loading google fonts
                     'css-loader',
                     // SASS loader, NOT node-sass,
@@ -77,11 +64,5 @@ module.exports = {
                 ]
             },
         ],
-    },
-    target: 'web',
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        hot: true,
     },
 };
