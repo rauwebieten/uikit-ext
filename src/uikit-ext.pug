@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+    head
+        title Hello, World!
+    body
+        h1 Hello, World!
+        div.uk-alert.uk-alert-success
+            p Pug rocks!
+        - const employees = ['Angela', 'Jim', 'Nilson', 'Simone']
+        ul
+            each employee in employees
+                li= employee
