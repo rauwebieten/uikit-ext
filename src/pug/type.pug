@@ -1,0 +1,14 @@
+
+- const theme_colors = ['blue','indigo','purple','pink','red','orange','yellow','green','teal','cyan']
+- const hs = [1,2,3,4,5,6]
+
+h2#type Type
+
+div.uk-card.uk-card-default.uk-card-small.uk-card-body
+
+    each h in hs
+        h1.uk-margin-remove(class='uk-h' + h) Title
+
+    each color in theme_colors
+        p(class='uk-text-' + color)
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

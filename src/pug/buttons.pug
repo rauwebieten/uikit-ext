@@ -3,55 +3,58 @@
 - const theme_greys = ['black','grey-10','grey-20','grey-30','grey-40','grey-50','grey-60','grey-70','grey-80','grey-90','white']
 
 h2#buttons Buttons
-p
-    each color in theme_colors
-        button.uk-button.uk-margin-small-right(class='uk-button-' + color) #{color}
-p
-    each color in theme_colors
-        button.uk-button.uk-button-outline.uk-margin-small-right(class='uk-button-' + color) #{color}
-p
-    each color in theme_colors
-        button.uk-button.uk-button-flat.uk-margin-small-right(class='uk-button-' + color) #{color}
-p
-    button.uk-margin-small-right.uk-button.uk-button-pink Pink button
-    button.uk-margin-small-right.uk-button.uk-button-pink.uk-button-outline Pink button
-    button.uk-margin-small-right.uk-button.uk-button-pink.uk-button-flat Pink button
+
+div.uk-card.uk-card-default.uk-card-small.uk-card-body
+
+    p
+        each color in theme_colors
+            button.uk-button.uk-margin-small-right(class='uk-button-' + color) #{color}
+    p
+        each color in theme_colors
+            button.uk-button.uk-button-outline.uk-margin-small-right(class='uk-button-' + color) #{color}
+    p
+        each color in theme_colors
+            button.uk-button.uk-button-flat.uk-margin-small-right(class='uk-button-' + color) #{color}
+    p
+        button.uk-margin-small-right.uk-button.uk-button-pink Pink button
+        button.uk-margin-small-right.uk-button.uk-button-pink.uk-button-outline Pink button
+        button.uk-margin-small-right.uk-button.uk-button-pink.uk-button-flat Pink button
 
 
-p
-    each color in theme_colors
-        button.uk-button.uk-button-icon.uk-margin-small-right(class='uk-button-' + color)
+    p
+        each color in theme_colors
+            button.uk-button.uk-button-icon.uk-margin-small-right(class='uk-button-' + color)
+                i.fa.fa-fw.fa-plus
+    p
+        each color in theme_colors
+            button.uk-button.uk-button-icon.uk-border-circle.uk-margin-small-right(class='uk-button-' + color)
+                i.fa.fa-fw.fa-check
+
+    p
+        button.uk-button.uk-button-pink.uk-button-multiline.uk-margin-small-right
+            i.fa.fa-2x.fa-fw.fa-plus
+            br
+            | Yeah!
+
+        button.uk-button.uk-button-pink.uk-button-outline.uk-button-multiline.uk-margin-small-right
+            | Yeah!
+            br
+            i.fa.fa-2x.fa-fw.fa-plus
+
+        button.uk-button.uk-button-green.uk-button-outline.uk-button-multiline.uk-margin-small-right.uk-button-large
+            i.fa.fa-3x.fa-fw.fa-plus
+            br
+            | Yeah!
+
+        button.uk-button.uk-button-cyan.uk-button-flat.uk-button-multiline.uk-margin-small-right.uk-button-small
             i.fa.fa-fw.fa-plus
-p
-    each color in theme_colors
-        button.uk-button.uk-button-icon.uk-border-circle.uk-margin-small-right(class='uk-button-' + color)
-            i.fa.fa-fw.fa-check
+            br
+            | Yeah!
 
-p
-    button.uk-button.uk-button-pink.uk-button-multiline.uk-margin-small-right
-        i.fa.fa-2x.fa-fw.fa-plus
-        br
-        | Yeah!
+    p
+        each color in theme_greys
+            button.uk-button.uk-button-small.uk-margin-small-right(class='uk-button-' + color) #{color}
 
-    button.uk-button.uk-button-pink.uk-button-outline.uk-button-multiline.uk-margin-small-right
-        | Yeah!
-        br
-        i.fa.fa-2x.fa-fw.fa-plus
-
-    button.uk-button.uk-button-green.uk-button-outline.uk-button-multiline.uk-margin-small-right.uk-button-large
-        i.fa.fa-3x.fa-fw.fa-plus
-        br
-        | Yeah!
-
-    button.uk-button.uk-button-cyan.uk-button-flat.uk-button-multiline.uk-margin-small-right.uk-button-small
-        i.fa.fa-fw.fa-plus
-        br
-        | Yeah!
-
-p
-    each color in theme_greys
-        button.uk-button.uk-button-small.uk-margin-small-right(class='uk-button-' + color) #{color}
-
-p
-    each color in theme_greys
-        button.uk-button.uk-button-outline.uk-button-small.uk-margin-small-right(class='uk-button-' + color) #{color}
+    p
+        each color in theme_greys
+            button.uk-button.uk-button-outline.uk-button-small.uk-margin-small-right(class='uk-button-' + color) #{color}

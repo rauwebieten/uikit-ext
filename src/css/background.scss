@@ -1,0 +1,13 @@
+@use "sass:color" as color;
+
+@import "./variables";
+@import "./mixins";
+
+@each $name, $color in $colors {
+  .uk-background-#{$name} {
+    @include theme_background_color($color);
+  }
+  .uk-background-soft-#{$name} {
+    @include theme_background_color( hsl(color.hue($color), 100%, 90%) );
+  }
+}

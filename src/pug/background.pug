@@ -1,0 +1,10 @@
+
+- const theme_colors = ['blue','indigo','purple','pink','red','orange','yellow','green','teal','cyan']
+
+h2#background Background
+
+div(uk-grid)
+
+    each color in theme_colors
+        div.uk-width-1-5
+            div(class='uk-background-' + color).uk-padding-small #{color}

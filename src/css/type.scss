@@ -1,0 +1,41 @@
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+
+$global-font-size: 1.5rem !default;
+
+h1, .uk-h1 {
+  font-size: ($global-font-size * 2.2);
+  line-height: 1.2;
+}
+
+h2, .uk-h2 {
+  font-size: ($global-font-size * 2.0);
+  line-height: 1.2;
+}
+
+h3, .uk-h3 {
+  font-size: ($global-font-size * 1.8);
+  line-height: 1.2;
+}
+
+h4, .uk-h4 {
+  font-size: ($global-font-size * 1.6);
+  line-height: 1.2;
+}
+
+h5, .uk-h5 {
+  font-size: ($global-font-size * 1.4);
+  line-height: 1.2;
+}
+
+h6, .uk-h6 {
+  font-size: ($global-font-size * 1.2);
+  line-height: 1;
+}
+
+@each $name, $color in $colors {
+  .uk-text-#{$name} {
+    color: $color;
+  }
+}
