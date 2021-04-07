@@ -1,0 +1,9 @@
+{
+  "name": "uikit-admin-theme",
+  "version": "1.0.0",
+  "description": "A work in progress",
+  "main": "src/uikit-ext.js",
+  "repository": "https://github.com/rauwebieten/uikit-admin-theme.git",
+  "author": "<rauwe.bieten@gmail.com>",
+  "license": "MIT"
+}
