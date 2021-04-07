@@ -1,0 +1,9 @@
+@use "sass:color";
+
+$dark-text-default: #000 !default;
+$light-text-default: #fff !default;
+
+@function color-contrast($color, $dark: $dark-text-default, $light: $light-text-default) {
+  $lightness: color.lightness($color);
+  @return if($lightness <= 70, $light, $dark);
+}

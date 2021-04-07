@@ -1,15 +1,106 @@
 @import "./variables";
+@import "./functions";
+@import "./mixins";
 
-@mixin hook-button() {
-  &.uk-button-lime {
-    background: $indigo;
-    color: white;
+$highlight-pct: 10% !default;
+$button-line-height: $global-control-height !default;
+$button-small-line-height: $global-control-small-height !default;
+$button-large-line-height: $global-control-large-height !default;
+$button-font-size: $global-font-size !default;
+
+.uk-button {
+  transition: 0.3s ease-out;
+  position: relative;
+}
+
+// ---- COLOR BUTTONS ---- //
+
+@each $name, $color in $colors {
+  .uk-button-#{$name} {
+    @include theme_background_color($color);
+    border: 1px solid $color;
+
+    &:hover {
+      background: darken($color, $highlight-pct);
+      //border: 1px solid darken($color, $highlight-pct);
+      color: color-contrast($color);
+    }
   }
 }
 
-@mixin hook-button-hover() {
-  &.uk-button-lime {
-    background: darken($indigo, 5);
-    color: white;
+// ---- OUTLINE BUTTONS ---- //
+
+@each $name, $color in $colors {
+  .uk-button-#{$name}.uk-button-outline {
+    background: transparent;
+    color: $color;
+
+    &:hover {
+      @include theme_background_color($color);
+      border: 1px solid $color;
+    }
   }
 }
+
+// ---- FLAT BUTTONS ---- //
+
+@each $name, $color in $colors {
+  .uk-button-#{$name}.uk-button-flat {
+    background: darken($white, $highlight-pct / 2);
+    border: 1px solid darken($white, $highlight-pct / 2);
+    color: $color;
+
+    &:hover {
+      background: darken($white, $highlight-pct);
+      border: 1px solid darken($white, $highlight-pct);
+      color: $color;
+    }
+  }
+}
+
+// ---- MULTILINE BUTTONS ---- //
+
+.uk-button-multiline {
+  line-height: 1.7;
+  padding: 10px 30px;
+
+  &.uk-button-small {
+    padding: 5px 15px;
+  }
+  &.uk-button-large {
+    padding: 20px 60px;
+  }
+}
+
+// ---- ICON BUTTONS ---- //
+
+.uk-button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $button-line-height;
+  height: $button-line-height;
+  font-size: $button-font-size;
+  padding: 0;
+  margin: 0;
+
+  &.uk-button-small {
+    width: $button-small-line-height;
+    height: $button-small-line-height;
+    font-size: ($button-font-size * 0.75);
+  }
+
+  &.uk-button-large {
+    width: $button-large-line-height;
+    height: $button-large-line-height;
+    font-size: ($button-font-size * 1.45);
+  }
+}
+
+// ---- FLOAT BUTTONS ---- //
+
+// use .uk-button-icon + .uk-border-circle
+
+// ---- LABELED BUTTONS ---- //
+
+// TODO import from old project

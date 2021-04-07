@@ -1,0 +1,12 @@
+@use "sass:color" as color;
+@import "./functions";
+@import "./variables";
+
+@mixin theme_background_color($color) {
+  background: $color;
+  color: color-contrast($color);
+}
+
+@mixin background_gradient($from, $to) {
+  background: linear-gradient(130deg, $from, $to);
+}
