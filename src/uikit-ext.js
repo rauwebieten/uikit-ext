@@ -21,6 +21,6 @@ import './uikit-ext.scss';
 
 // ready
 
-console.log(_.join(['Hello', 'webpack'], ' '));
+console.log('UIkit-ext ready :)');
 
 export {UIkit, $, _};

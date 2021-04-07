@@ -21,7 +21,6 @@ module.exports = {
     plugins: [
         // plugin to create index.html file
         new HtmlWebpackPlugin({
-            title: 'UIkit-ext demo',
             template: 'src/uikit-ext.pug',
         }),
         // plugin to build CSS in a separate file
@@ -78,5 +77,11 @@ module.exports = {
                 ]
             },
         ],
-    }
+    },
+    target: 'web',
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        hot: true,
+    },
 };
