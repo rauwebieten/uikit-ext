@@ -1,0 +1,12 @@
+@import "./variables";
+@import "./mixins";
+
+.uk-card {
+  position: relative;
+}
+
+@each $color, $value in $colors {
+  .uk-card-#{$color} {
+    @include theme_background_color($value);
+  }
+}

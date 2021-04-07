@@ -3,6 +3,7 @@ doctype html
 html(lang='en')
     head
         title UIkit-ext demo
+        script(src="https://unpkg.com/hyperscript.org@0.0.8")
     body
         div.uk-container.uk-container-large
             h1 UIkit-ext demo
@@ -16,6 +17,9 @@ html(lang='en')
                                 a(href="#type",uk-scroll) Type
                                 a(href="#alerts",uk-scroll) Alerts
                                 a(href="#background",uk-scroll) Background
+                                a(href="#notifications",uk-scroll) Notifications
+                                a(href="#labels",uk-scroll) Labels
+                                a(href="#badges",uk-scroll) Badges
                             li.uk-nav-divider
 
                 div.uk-width-5-6
@@ -23,3 +27,8 @@ html(lang='en')
                     include pug/type.pug
                     include pug/alerts.pug
                     include pug/background.pug
+                    include pug/notifications.pug
+                    include pug/labels.pug
+                    include pug/badges.pug
+
+                    p.uk-margin-large

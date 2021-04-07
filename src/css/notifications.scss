@@ -1,0 +1,29 @@
+@use "sass:color" as color;
+@import "./functions";
+@import "./variables";
+@import "./mixins";
+
+$colors: $colors !default;
+$global-font-size: $global-font-size !default;
+$global-success-background: $global-success-background !default;
+
+.uk-notification-message {
+  font-size: $global-font-size;
+}
+
+.uk-notification-message-success {
+  background-color: $global-success-background;
+  color: color-contrast($global-success-background);
+  & .uk-close {
+    color: color-contrast($global-success-background);
+  }
+}
+
+@each $name, $color in $colors {
+  .uk-notification-message-#{$name} {
+    @include theme_background_color($color);
+    & .uk-close {
+      color: color-contrast($global-success-background);
+    }
+  }
+}

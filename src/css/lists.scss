@@ -1,0 +1,39 @@
+@use "sass:color" as color;
+
+@import "./variables";
+@import "./mixins";
+
+$separators: () !default;
+$separators: map-merge((
+        "slash":      " /",
+        "pipe":       " |",
+        "dash":       " -",
+        "bullet":     " •",
+        "square":     " ▪",
+        "arrow":      " →",
+), $separators);
+
+ul.uk-list-inline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+
+  @each $name, $separator in $separators {
+    &.uk-list-inline-#{$name} {
+      & > li {
+        &::before {
+          content: none;
+        }
+        &:not(:last-child)::after {
+          content: $separator;
+          margin-left: 6px;
+        }
+        list-style: none;
+        margin: 0 6px 0 0;
+        padding: 0;
+        display: inline;
+      }
+    }
+  }
+}

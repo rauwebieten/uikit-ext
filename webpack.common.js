@@ -9,7 +9,11 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].js',
-        library: '_' // make the exports from the entry file available as "_" variable in HTML doc
+
+        library: { // make the exports from the entry file available as "_" variable in HTML doc
+            type: 'var',
+            name: '_',
+        }
     },
     resolve: {
         extensions: ['.js'],
@@ -18,6 +22,8 @@ module.exports = {
         // plugin to create index.html file
         new HtmlWebpackPlugin({
             template: 'src/uikit-ext.pug',
+            inject: 'head',
+            scriptLoading: 'blocking'
         }),
         // plugin to build CSS in a separate file
         new MiniCssExtractPlugin({

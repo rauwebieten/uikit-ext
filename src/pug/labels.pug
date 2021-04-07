@@ -1,0 +1,23 @@
+
+- const theme_colors = ['blue','indigo','purple','pink','red','orange','yellow','green','teal','cyan']
+- const theme_greys = ['black','grey-10','grey-20','grey-30','grey-40','grey-50','grey-60','grey-70','grey-80','grey-90','white']
+
+h2#labels Labels
+
+div.uk-card.uk-card-default.uk-card-small.uk-card-body
+
+    p
+        each color in theme_colors
+            span.uk-label.uk-margin-small-right(class='uk-label-' + color) #{color}
+
+    p
+        each color in theme_colors
+            span.uk-label.uk-label-outline.uk-margin-small-right(class='uk-label-' + color) #{color}
+
+    p
+        each color in theme_greys
+            span.uk-label.uk-margin-small-right(class='uk-label-' + color) #{color}
+
+    p
+        each color in theme_greys
+            span.uk-label.uk-label-outline.uk-margin-small-right(class='uk-label-' + color) #{color}

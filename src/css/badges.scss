@@ -1,0 +1,44 @@
+@use "sass:color" as color;
+@import "./functions";
+@import "./variables";
+@import "./mixins";
+
+$colors: $colors !default;
+$global-control-height: $global-control-height !default;
+$global-line-height: $global-line-height !default;
+
+// ---- COLOR BADGES ---- //
+
+@each $name, $color in $colors {
+  .uk-badge-#{$name} {
+    border: 1px solid transparent;
+    @include theme_background_color($color);
+
+    &:hover {
+      @include theme_background_color($color);
+    }
+  }
+}
+
+// ---- OUTLINE BADGES ---- //
+
+@each $name, $color in $colors {
+  .uk-badge-#{$name}.uk-badge-outline {
+    background: transparent;
+    color: $color;
+    border: 1px solid $color;
+  }
+}
+
+// ---- SUPERSCRIPT BADGES ---- //
+
+.uk-badge-superscript {
+  position: relative;
+  left: 0;
+  margin-right: -20px;
+  top: ($global-control-height * -0.25);
+
+  .uk-button & {
+    top: ($global-control-height * -0.5);
+  }
+}

@@ -1,0 +1,10 @@
+
+- const theme_colors = ['blue','indigo','purple','pink','red','orange','yellow','green','teal','cyan']
+
+h2#notifications Notifications
+
+p
+    each color in theme_colors
+
+        button.uk-button.uk-button-icon.uk-margin-small-right(class='uk-button-' + color,onclick="_.UIkit.notification('Notification',{status:'"+color+"', pos:'bottom-right'})")
+            i.fa.fa-fw.fa-chevron-right

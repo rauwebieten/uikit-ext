@@ -1,0 +1,25 @@
+@use "sass:color" as color;
+@import "./functions.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
+
+$colors: $colors !default;
+
+// ---- COLOR LABELS ---- //
+
+@each $name, $color in $colors {
+  .uk-label-#{$name} {
+    border: 1px solid transparent;
+    @include theme_background_color($color);
+  }
+}
+
+// ---- OUTLINE LABELS ---- //
+
+@each $name, $color in $colors {
+  .uk-label-#{$name}.uk-label-outline {
+    background: transparent;
+    color: $color;
+    border: 1px solid $color;
+  }
+}

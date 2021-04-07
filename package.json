@@ -6,9 +6,9 @@
   "author": "<rauwe.bieten@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "lodash": "^4.17.21",
     "@fortawesome/fontawesome-free": "^5.15.3",
     "jquery": "^3.6.0",
-    "lodash": "^4.17.21",
     "uikit": "^3.6.18"
   },
   "devDependencies": {
@@ -27,7 +27,7 @@
     "terser-webpack-plugin": "^5.1.1",
     "webpack": "^5.30.0",
     "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2",
+    "webpack-dev-server": "4.0.0-beta.2",
     "webpack-merge": "^5.7.3"
   },
   "scripts": {
