@@ -1,0 +1,9 @@
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+
+@each $name, $color in $colors {
+  .uk-alert-#{$name} {
+    @include theme_background_color($color);
+  }
+}

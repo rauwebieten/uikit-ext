@@ -1,55 +1,21 @@
 doctype html
 
-- const theme_colors = ['blue','indigo','purple','pink','red','orange','yellow','green','teal','cyan']
-
 html(lang='en')
     head
         title UIkit-ext demo
     body
-        div.uk-container
+        div.uk-container.uk-container-large
             h1 UIkit-ext demo
-            h2 Buttons
-            p
-                each color in theme_colors
-                    button.uk-button.uk-margin-small-right(class='uk-button-' + color) #{color}
-            p
-                each color in theme_colors
-                    button.uk-button.uk-button-outline.uk-margin-small-right(class='uk-button-' + color) #{color}
-            p
-                each color in theme_colors
-                    button.uk-button.uk-button-flat.uk-margin-small-right(class='uk-button-' + color) #{color}
-            p
-                button.uk-margin-small-right.uk-button.uk-button-pink Pink button
-                button.uk-margin-small-right.uk-button.uk-button-pink.uk-button-outline Pink button
-                button.uk-margin-small-right.uk-button.uk-button-pink.uk-button-flat Pink button
+            div(uk-grid)
+                div.uk-width-1-5
+                    div(uk-sticky)
+                        ul.uk-nav.uk-nav-default
+                            li.uk-nav-header Content
+                            li
+                                a(href="#buttons",uk-scroll) Buttons
+                                a(href="#alerts",uk-scroll) Alerts
+                            li.uk-nav-divider
 
-
-            p
-                each color in theme_colors
-                    button.uk-button.uk-button-icon.uk-margin-small-right(class='uk-button-' + color)
-                        i.fa.fa-fw.fa-plus
-            p
-                each color in theme_colors
-                    button.uk-button.uk-button-icon.uk-border-circle.uk-margin-small-right(class='uk-button-' + color)
-                        i.fa.fa-fw.fa-check
-
-            p
-                button.uk-button.uk-button-pink.uk-button-multiline.uk-margin-small-right
-                    i.fa.fa-2x.fa-fw.fa-plus
-                    br
-                    | Yeah!
-
-                button.uk-button.uk-button-pink.uk-button-outline.uk-button-multiline.uk-margin-small-right
-                    | Yeah!
-                    br
-                    i.fa.fa-2x.fa-fw.fa-plus
-
-                button.uk-button.uk-button-green.uk-button-outline.uk-button-multiline.uk-margin-small-right.uk-button-large
-                    i.fa.fa-3x.fa-fw.fa-plus
-                    br
-                    | Yeah!
-
-                button.uk-button.uk-button-cyan.uk-button-flat.uk-button-multiline.uk-margin-small-right.uk-button-small
-                    i.fa.fa-fw.fa-plus
-                    br
-                    | Yeah!
+                div.uk-width-4-5
+                    include pug/buttons.pug
+                    include pug/alerts.pug

@@ -1,0 +1,14 @@
+
+- const theme_colors = ['blue','indigo','purple','pink','red','orange','yellow','green','teal','cyan']
+
+h2#alerts Alerts
+
+div
+    each color in theme_colors
+        div(uk-alert,class='uk-alert-' + color)
+            a.uk-alert-close(uk-close)
+            p
+                strong Notice
+                br
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
