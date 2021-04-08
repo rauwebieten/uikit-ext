@@ -11,20 +11,35 @@ html(lang='en')
                 div.uk-width-1-6
                     div(uk-sticky)
                         ul.uk-nav.uk-nav-default
-                            li.uk-nav-header Content
+                            li.uk-nav-header Theme
                             li
                                 a(href="#buttons",uk-scroll) Buttons
+                            li
                                 a(href="#type",uk-scroll) Type
+                            li
                                 a(href="#alerts",uk-scroll) Alerts
+                            li
                                 a(href="#background",uk-scroll) Background
+                            li
                                 a(href="#notifications",uk-scroll) Notifications
+                            li
                                 a(href="#labels",uk-scroll) Labels
+                            li
                                 a(href="#badges",uk-scroll) Badges
+                            li
                                 a(href="#tab",uk-scroll) Tab
+                            li
                                 a(href="#subnav",uk-scroll) Subnav
+                            li
                                 a(href="#list",uk-scroll) List
+                            li
                                 a(href="#speech",uk-scroll) Speech
                             li.uk-nav-divider
+                            li.uk-nav-header Libs
+                            li
+                                a(href="#hover-css",uk-scroll) Hover.css
+                            li
+                                a(href="#flatpickr",uk-scroll) Flatpickr
 
                 div.uk-width-5-6
                     include pug/buttons.pug
@@ -38,5 +53,7 @@ html(lang='en')
                     include pug/subnavs.pug
                     include pug/list.pug
                     include pug/speech.pug
+                    include pug/hover-css.pug
+                    include pug/flatpickr.pug
 
                     p.uk-margin-large

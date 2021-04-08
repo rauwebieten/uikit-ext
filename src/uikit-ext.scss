@@ -14,8 +14,11 @@ $global-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 // Import UIkit
 @import "~uikit/src/scss/uikit-theme.scss";
 
-// Custom lib CSS
+// Custom CSS libs
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import "~hover.css/css/hover.css";
+@import "~flatpickr/dist/flatpickr.css";
+@import "~flatpickr/dist/themes/airbnb.css";
 
 // Custom CSS
 

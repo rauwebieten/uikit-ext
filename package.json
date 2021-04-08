@@ -6,9 +6,12 @@
   "author": "<rauwe.bieten@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "lodash": "^4.17.21",
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "flatpickr": "^4.6.9",
+    "hover.css": "^2.3.2",
     "jquery": "^3.6.0",
+    "json5": "^2.2.0",
+    "lodash": "^4.17.21",
     "uikit": "^3.6.18"
   },
   "devDependencies": {
