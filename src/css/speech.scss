@@ -1,0 +1,103 @@
+@use "sass:color" as color;
+
+@import "./variables";
+@import "./mixins";
+
+$arrow-width: 10px !default;
+
+@mixin arrow_base() {
+  position: absolute;
+  content: ' ';
+  width: 0;
+  height: 0;
+}
+
+.uk-speech {
+  background: #eeeeee;
+  padding: 10px 10px;
+  position: relative;
+}
+
+@each $name, $color in $colors {
+  .uk-speech-#{$name} {
+    @include theme_background_color($color);
+    &.uk-speech-left-top::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent $color transparent transparent;
+      left: ($arrow-width * -2); top: 10px;
+    }
+    &.uk-speech-left-center::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent $color transparent transparent;
+      left: ($arrow-width * -2); top: 50%; margin-top: ($arrow-width * -1);
+    }
+    &.uk-speech-left-bottom::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent $color transparent transparent;
+      left: ($arrow-width * -2); bottom: 10px;
+    }
+
+    &.uk-speech-right-top::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent transparent transparent $color;
+      right: ($arrow-width * -2); top: 10px;
+    }
+    &.uk-speech-right-center::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent transparent transparent $color;
+      right: ($arrow-width * -2); top: 50%; margin-top: ($arrow-width * -1);
+    }
+    &.uk-speech-right-bottom::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent transparent transparent $color;
+      right: ($arrow-width * -2); bottom: 10px;
+    }
+
+    &.uk-speech-bottom-left::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: $color transparent transparent transparent;
+      left: 10px; bottom: ($arrow-width * -2);
+    }
+    &.uk-speech-bottom-center::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: $color transparent transparent transparent;
+      bottom: ($arrow-width * -2); left: 50%; margin-left: ($arrow-width * -1);
+    }
+    &.uk-speech-bottom-right::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: $color transparent transparent transparent;
+      right: 10px; bottom: ($arrow-width * -2);
+    }
+
+    &.uk-speech-top-left::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent transparent $color transparent;
+      left: 10px; top: ($arrow-width * -2);
+    }
+    &.uk-speech-top-center::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent transparent $color transparent;
+      top: ($arrow-width * -2); left: 50%; margin-left: ($arrow-width * -1);
+    }
+    &.uk-speech-top-right::after {
+      @include arrow_base();
+      border:  $arrow-width solid;
+      border-color: transparent transparent $color transparent;
+      right: 10px; top: ($arrow-width * -2);
+    }
+  }
+}
+
+.uk-speech {
+}

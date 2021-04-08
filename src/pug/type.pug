@@ -4,11 +4,19 @@
 
 h2#type Type
 
-div.uk-card.uk-card-default.uk-card-small.uk-card-body
+div(uk-grid)
+    div.uk-width-1-2
 
-    each h in hs
-        h1.uk-margin-remove(class='uk-h' + h) Title
+        div.uk-card.uk-card-default.uk-card-small.uk-card-body
 
-    each color in theme_colors
-        p(class='uk-text-' + color)
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            each h in hs
+                h1.uk-margin-remove(class='uk-h' + h) Title
+
+            p
+                each color in theme_colors
+                    span(class='uk-text-' + color)
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    br
+
+
+    div.uk-width-1-2

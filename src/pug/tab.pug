@@ -40,15 +40,19 @@ div(uk-grid)
                 | Body
             div.uk-card-footer Footer
 
-    //div.uk-width-1-3
-    //    div.uk-card.uk-card-default.uk-card-small
-    //        ul.uk-tab.uk-tab-extralarge.uk-child-width-expand.uk-tab-outside-card
-    //            li.uk-active
-    //                a(href="javascript:void(0);") Active
-    //            li
-    //                a(href="javascript:void(0);") Item
-    //            li
-    //                a(href="javascript:void(0);") Item
-    //        div.uk-card-body
-    //            | Body
-    //        div.uk-card-footer Footer
+    div.uk-width-1-3
+        div.uk-card.uk-card-default.uk-card-small
+            div(uk-grid).uk-grid-collapse
+                div.uk-width-auto
+                    ul.uk-tab.uk-tab-extralarge.uk-tab-left.uk-margin-remove-right
+                        li.uk-active
+                            a(href="javascript:void(0);") Active
+                        li
+                            a(href="javascript:void(0);") Item
+                        li
+                            a(href="javascript:void(0);") Item
+                div.uk-width-expand
+                    div.uk-padding-small
+
+                        | Expand
+

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,700;1,400&display=swap');
 
 // UIKit variables and variable overwrites.
 $global-font-size: 14px !default;
@@ -18,14 +19,15 @@ $global-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Ro
 
 // Custom CSS
 
-@import "./css/core";
-@import "./css/type";
-@import "./css/background";
-@import "./css/buttons";
-@import "./css/alerts";
-@import "./css/notifications";
-@import "./css/badges";
-@import "./css/cards";
-@import "./css/labels";
-@import "./css/lists";
-@import "./css/tab";
+@import "css/core";
+@import "css/type";
+@import "css/background";
+@import "css/button";
+@import "css/alert";
+@import "css/notification";
+@import "css/badge";
+@import "css/card";
+@import "css/labels";
+@import "css/list";
+@import "css/tab";
+@import "css/speech";

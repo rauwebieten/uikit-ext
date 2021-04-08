@@ -1,0 +1,18 @@
+
+- const separators = ['slash','pipe','dash','bullet','square','hsquare','arrow']
+
+h2#list List
+
+div.uk-card.uk-card-default.uk-card-small
+
+    div.uk-card-body
+
+        h3 Inline list with separator
+
+        each separator in separators
+
+            ul.uk-list-inline(class='uk-list-inline-' + separator)
+
+                li List item A
+                li List item B
+                li List item C
