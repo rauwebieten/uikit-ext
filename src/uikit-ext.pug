@@ -14,6 +14,8 @@ html(lang='en')
                         ul.uk-nav.uk-nav-default
                             li.uk-nav-header Theme
                             li
+                                a(href="#offcanvas",uk-scroll) Off-canvas
+                            li
                                 a(href="#buttons",uk-scroll) Buttons
                             li
                                 a(href="#type",uk-scroll) Type
@@ -48,6 +50,7 @@ html(lang='en')
 
                 div.uk-width-5-6
                     include pug/navbar.pug
+                    include pug/offcanvas.pug
                     include pug/buttons.pug
                     include pug/type.pug
                     include pug/alerts.pug
