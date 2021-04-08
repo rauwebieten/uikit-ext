@@ -2491,6 +2491,11 @@ htmlparser2@^3.10.1:
     inherits "^2.0.1"
     readable-stream "^3.1.1"
 
+htmx.org@^1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/htmx.org/-/htmx.org-1.3.3.tgz#74913afe6a4cf7b7528d0fd5451529694de1759a"
+  integrity sha512-Rba6hHlVyplqlDfYDg2JlpXa5HrVObw7cZBx7lrhfgEualOEm1EZ5f1fi0FY8Q75cknFzFMKppXIbV3wh2Y1NQ==
+
 http-deceiver@^1.2.7:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/http-deceiver/-/http-deceiver-1.2.7.tgz#fa7168944ab9a519d337cb0bec7284dc3e723d87"
@@ -2558,6 +2563,11 @@ human-signals@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/human-signals/-/human-signals-2.1.0.tgz#dc91fcba42e4d06e4abaed33b3e7a3c02f514ea0"
   integrity sha512-B4FFZ6q/T2jhhksgkbEW3HBvWIfDW85snkQgawt07S7J5QXTk6BkNV+0yAeZrM5QpMAdYlocGoljn0sJ/WQkFw==
+
+hyperscript.org@^0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/hyperscript.org/-/hyperscript.org-0.0.9.tgz#38c3ba8f2e41a1a887098454aee41ba16e91bc08"
+  integrity sha512-0EONbc/MMsdRQtJYeAIuXmi5i/QiWqYmzxX3LG9PyzNDHk1OAMn8ymnWRazDSl7D6IEAWKhY4UZ6rNM+jlTtww==
 
 iconv-lite@0.4.24:
   version "0.4.24"

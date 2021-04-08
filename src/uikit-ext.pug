@@ -4,6 +4,7 @@ html(lang='en')
     head
         title UIkit-ext demo
         script(src="https://unpkg.com/hyperscript.org@0.0.8")
+        script(src="https://unpkg.com/htmx.org@1.3.3")
     body
         div.uk-container.uk-container-large
             h1 UIkit-ext demo
@@ -37,6 +38,10 @@ html(lang='en')
                             li.uk-nav-divider
                             li.uk-nav-header Libs
                             li
+                                a(href="#hyperscript",uk-scroll) Hyperscript
+                            li
+                                a(href="#htmx",uk-scroll) HTMX
+                            li
                                 a(href="#hover-css",uk-scroll) Hover.css
                             li
                                 a(href="#flatpickr",uk-scroll) Flatpickr
@@ -53,6 +58,8 @@ html(lang='en')
                     include pug/subnavs.pug
                     include pug/list.pug
                     include pug/speech.pug
+                    include pug/hyperscript
+                    include pug/htmx
                     include pug/hover-css.pug
                     include pug/flatpickr.pug
 
