@@ -1,0 +1,114 @@
+@use "sass:color" as color;
+
+@import "./variables";
+@import "./functions";
+@import "./mixins";
+
+$timeline-thin-border-width: 1px !default;
+$timeline-fat-border-width: 3px !default;
+
+@mixin bullet_base($border-width) {
+  content: ' ';
+  position: absolute;
+  width: ($border-width + 10);
+  height: ($border-width + 10);
+  border-radius: ($border-width + 10);
+  left: (-$border-width - 5);
+  top: 5px;
+}
+
+.uk-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > li {
+    list-style: none;
+    margin: 0 0 0 10px;
+    padding: 0 0 20px 20px;
+    position: relative;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.uk-timeline-thin {
+  & > li {
+    border-left-width: $timeline-thin-border-width;
+    border-left-style: solid;
+  }
+}
+
+.uk-timeline-fat {
+  & > li {
+    border-left-width: $timeline-fat-border-width;
+    border-left-style: solid;
+  }
+}
+
+@each $name, $color in $colors {
+  .uk-timeline-#{$name} {
+    & > li {
+      border-color: $color;
+    }
+  }
+}
+
+.uk-timeline-bullet {
+  &.uk-timeline-thin {
+    & > li {
+      @each $name, $color in $colors {
+        &.uk-timeline-item-#{$name}::before {
+          @include bullet_base($timeline-thin-border-width);
+          background: $color;
+        }
+      }
+    }
+  }
+  &.uk-timeline-fat {
+    & > li {
+      @each $name, $color in $colors {
+        &.uk-timeline-item-#{$name}::before {
+          @include bullet_base($timeline-fat-border-width);
+          background: $color;
+        }
+      }
+    }
+  }
+}
+
+.uk-timeline-icon {
+  & > li {
+    @each $name, $color in $colors {
+      &.uk-timeline-item-#{$name} {
+        & .uk-timeline-icon {
+          color: $color;
+          background: color-contrast($color);
+          width: 25px; height: 25px; border-radius: 25px;
+          position: absolute;
+          top: -2px;
+
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  &.uk-timeline-thin {
+    & .uk-timeline-icon {
+      left: -13px;
+    }
+  }
+  &.uk-timeline-fat {
+    & .uk-timeline-icon {
+      left: -14px;
+    }
+  }
+}

@@ -6,15 +6,6 @@ module.exports = {
     entry: {
         'uikit-ext': path.resolve(__dirname, 'src/uikit-ext.js'),
     },
-    output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].js',
-
-        library: { // make the exports from the entry file available as "_" variable in HTML doc
-            type: 'var',
-            name: '_',
-        }
-    },
     resolve: {
         extensions: ['.js'],
     },

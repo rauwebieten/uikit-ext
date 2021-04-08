@@ -1,0 +1,24 @@
+
+$navbar-height:       $navbar-nav-item-height !default;
+
+.uk-navbar-nav > li > a,
+.uk-navbar-item,
+.uk-navbar-toggle {
+  min-height: ($navbar-height - 15);
+}
+
+.uk-navbar-small .uk-navbar-nav > li > a,
+.uk-navbar-small .uk-navbar-item,
+.uk-navbar-small .uk-navbar-toggle {
+  min-height: ($navbar-height - 30);
+}
+
+.uk-navbar-large .uk-navbar-nav > li > a,
+.uk-navbar-large .uk-navbar-item,
+.uk-navbar-large .uk-navbar-toggle {
+  min-height: ($navbar-height + 0);
+}
+
+.uk-navbar-dropdown-nav {
+  font-size: 0.9rem;
+}

@@ -1,0 +1,173 @@
+@use "sass:color" as color;
+@import "./functions";
+@import "./variables";
+@import "./mixins";
+
+$colors: $colors !default;
+$ribbon-border-radius: 10px !default;
+
+$indexes: 1,2,3,4,5;
+
+@mixin ribbon_backside_left($color) {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  bottom: -5px;
+  border-width: 0 5px 5px 0;
+  border-right-color: darken($color, 10) !important;
+  left: 0;
+}
+
+@mixin ribbon_backside_right($color) {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  bottom: -5px;
+  border-width: 0 0 5px 5px;
+  border-left-color: darken($color, 10) !important;
+  right: 0;
+}
+
+@mixin ribbon_backside_top($color) {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  left: -5px;
+  border-width: 0 0 5px 5px;
+  border-bottom-color: darken($color, 10) !important;
+  top: 0;
+}
+
+@mixin ribbon_backside_bottom($color) {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+  left: -5px;
+  border-width: 5px 0 0 5px;
+  border-top-color: darken($color, 10) !important;
+  bottom: 0;
+}
+
+.uk-ribbon {
+  display: inline-block;
+  padding: 5px 10px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+  position: absolute;
+
+  &[class*="uk-ribbon-top"] {
+    border-radius: 0 0 $ribbon-border-radius $ribbon-border-radius;
+    top: -5px;
+
+    &[class*="-left"] {
+      left: 10px;
+    }
+    &[class*="-right"] {
+      right: 10px;
+    }
+  }
+
+  &[class*="uk-ribbon-bottom"] {
+    border-radius: $ribbon-border-radius $ribbon-border-radius 0 0 ;
+    bottom: -5px;
+
+    &[class*="-left"] {
+      left: 10px;
+    }
+    &[class*="-right"] {
+      right: 10px;
+    }
+  }
+
+  &[class*="uk-ribbon-left"] {
+    border-radius: 0 $ribbon-border-radius $ribbon-border-radius 0;
+    left: -5px;
+
+    &[class*="-top"] {
+      top: 10px;
+    }
+    &[class*="-bottom"] {
+      bottom: 10px;
+    }
+  }
+
+  &[class*="uk-ribbon-right"] {
+    border-radius: $ribbon-border-radius 0 0 $ribbon-border-radius;
+    right: -5px;
+
+    &[class*="-top"] {
+      top: 10px;
+    }
+    &[class*="-bottom"] {
+      bottom: 10px;
+    }
+  }
+
+  @each $name, $color in $colors {
+    &.uk-ribbon-#{$name} {
+      @include theme_background_color($color);
+
+      &[class*="uk-ribbon-right"] {
+        &::before {
+          @include ribbon_backside_right($color);
+        }
+      }
+      &[class*="uk-ribbon-left"] {
+        &::before {
+          @include ribbon_backside_left($color);
+        }
+      }
+      &[class*="uk-ribbon-top"] {
+        &::before {
+          @include ribbon_backside_top($color);
+        }
+      }
+      &[class*="uk-ribbon-bottom"] {
+        &::before {
+          @include ribbon_backside_bottom($color);
+        }
+      }
+    }
+  }
+}
+
+//@each $index in $indexes {
+//  &:nth-of-type(#{$index}) {
+//    top: (40px * ($index - 1) + 10);
+//  }
+//}
+// ribbon positions
+//
+//.uk-ribbon-right-top {
+//  position: absolute;
+//  right: -5px;
+//  top: 10px;
+//  border-top-left-radius: 8px;
+//  border-bottom-left-radius: 8px;
+//}
+//
+//.uk-ribbon-right-bottom {
+//  position: absolute;
+//  right: -5px;
+//  bottom: 10px;
+//  border-top-left-radius: 8px;
+//  border-bottom-left-radius: 8px;
+//}
+
+// ribbon backside
+
+//.uk-ribbon::before {
+//  content: "";
+//  position: absolute;
+//  border-style: solid;
+//  border-color: transparent;
+//  bottom: -5px;
+//  border-width: 0 0 5px 5px;
+//  border-left-color: darken($red, 10) !important;
+//  right: 0;
+//}
+
+// ---- COLOR RIBBONS ---- //
