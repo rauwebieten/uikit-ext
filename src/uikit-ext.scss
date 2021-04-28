@@ -4,6 +4,7 @@
 // UIKit variables and variable overwrites.
 $global-font-size: 14px !default;
 $global-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$button-font-size: $global-font-size !default;
 
 $offcanvas-bar-background: #fff;
 $offcanvas-bar-color-mode: none;

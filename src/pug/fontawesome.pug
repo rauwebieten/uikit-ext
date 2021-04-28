@@ -1,0 +1,37 @@
+H1#fontawesome Font Awesome
+
+- const icons = ['cut','copy','paste','align-left','align-right','align-center','list','users','trash']
+
+div.uk-card.uk-card-default.uk-card-small.uk-card-body
+
+    div.uk-margin
+        each icon in icons
+            i.fa.fa-fw(class='fa-' + icon)
+
+    div.uk-margin.uk-text-small.uk-text-muted
+        each icon in icons
+            i.fa.fa-fw(class='fa-' + icon)
+
+    div.uk-margin
+        div.uk-button-group
+            each icon in icons
+                button.uk-button.uk-button-default
+                    i.fa.fa-fw(class='fa-' + icon)
+
+    div.uk-margin
+        div.uk-button-group
+            each icon in icons
+                button.uk-button.uk-button-default.uk-button-small
+                    i.fa.fa-fw(class='fa-' + icon)
+
+    div.uk-margin
+        div.uk-button-group
+            each icon in icons
+                button.uk-button.uk-button-pink
+                    i.fa.fa-fw(class='fa-' + icon)
+
+    div.uk-margin
+        div.uk-button-group
+            each icon in icons
+                button.uk-button.uk-button-pink.uk-button-small
+                    i.fa.fa-fw(class='fa-' + icon)
